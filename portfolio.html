@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alejandro Sandoval's Portfolio</title>
+  <style>
+    body {
+      background-image: url("background.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      
+    }
+
+    .title {
+      font-family: Impact, sans-serif;
+      font-size: 80px;
+      color: #4b5320; /* Army green color */
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+    }
+       /* Golden Bracket */
+       .golden-bracket {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 500px;
+      background-color: #ffd700;
+      clip-path: polygon(0 0, 0 30%, 70% 30%, 70% 100%, 100% 100%, 100% 70%, 30% 70%, 30% 0);
+      z-index: 1;
+    }
+
+    /* Black Bracket */
+.black-bracket {
+  position: absolute;
+  bottom: 0;
+  left: 0; /* Changed from 'right' to 'left' */
+  width: 200px;
+  height: 500px;
+  background-color: #ffffff;
+  clip-path: polygon(100% 0, 100% 30%, 30% 30%, 30% 100%, 0 100%, 0 70%, 70% 70%, 70% 0);
+  z-index: 1;
+}
+
+ /* Mirrored Golden Bracket */
+ .golden-bracket-mirrored {
+      position: absolute;
+      top: 0;
+      right: 0; /* Positioned on the right side */
+      width: 200px;
+      height: 500px;
+      background-color: #ffd700;
+      clip-path: polygon(100% 0, 100% 30%, 30% 30%, 30% 100%, 0 100%, 0 70%, 70% 70%, 70% 0); /* Reversed clip-path coordinates */
+      z-index: 1;
+    }
+
+    /* Mirrored Black Bracket */
+    .black-bracket-mirrored {
+      position: absolute;
+      bottom: 0;
+      right: 0; /* Positioned on the right side */
+      width: 200px;
+      height: 500px;
+      background-color: #ffffff;
+      clip-path: polygon(0 0, 0 30%, 70% 30%, 70% 100%, 100% 100%, 100% 70%, 30% 70%, 30% 0); /* Reversed clip-path coordinates */
+      z-index: 1;
+    }
+    /* Rest of your styles */
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+      text-align: center; /* Center the heading */
+    }
+
+    .image-container {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 20px;
+      background-color: #fff; /* Add a white background color */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-button,
+    .projects-button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: 'Arial', sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: background-color 0.3s ease;
+      margin-top: 20px; /* Add margin to separate the buttons */
+    }
+
+    .about-button:hover,
+    .projects-button:hover {
+      background-color: #0056b3;
+    }
+
+    .about-content {
+      margin-top: 20px;
+      display: none;
+      font-family: Impact, sans-serif;
+      color: #4b5320; /* Army green color */
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      text-shadow: 2px 2px 2px rgba( 0, 0.5);
+    }
+
+    .typing-effect {
+      display: inline-block;
+      overflow: hidden;
+      animation: typing 3s steps(40, end);
+      white-space: nowrap;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      background-color: rgb(151, 151, 151);
+      border-radius: 10px;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    /* Rest of your styles */
+    
+    /* Container for Clickable Images */
+    .container1 {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    /* Clickable Image */
+    .clickable-image {
+      width: 400px; /* Increase the width of the images */
+      height: auto; /* Use 'auto' to maintain aspect ratio */
+      margin: 0 10px;
+      cursor: pointer;
+    }
+  </style>
+
+  <script>
+    function toggleAbout() {
+      var aboutContent = document.getElementById("about-content");
+      aboutContent.style.display = aboutContent.style.display === "none" ? "block" : "none";
+    }
+  </script>
+</head>
+<body>
+  
+  <div class="golden-bracket"></div>
+  <div class="black-bracket"></div>
+  <div class="golden-bracket-mirrored"></div>
+  <div class="black-bracket-mirrored"></div>
+  <div class="container">
+    <h1 class="title">Alejandro Sandoval</h1>
+    <div class="image-container">
+      <img src="Alejandro.jpg" alt="Alejandro Sandoval">
+    </div>
+    <div class="about">
+      <button class="about-button" onclick="toggleAbout()">About Me</button>
+      <div id="about-content" class="about-content">
+        <ul class="typing-effect">
+          <li>Digital Evidence Technician- Arapahoe County Sheriff's</li>
+          <li>Property and Evidence Technician-Denver Police Department</li>
+          <li>Chemical Specialist - US Army</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container1">
+    <a href="https://github.com/pocho123" target="_blank" rel="noopener noreferrer">
+      <img class="github-logo" src="github-logo.png" alt="GitHub Logo" width="115px">
+    </a>
+    <a href="https://www.linkedin.com/in/alejandro-sandoval-6b64aa16a/" target="_blank" rel="noopener noreferrer">
+      <img class="linkedin" src="linkedin logo.png" alt="LinkedIn Logo" width="62px">
+    </a>
+  </div>
+
+  <div class="container1">
+    <button class="projects-button">My Projects</button>
+  </div>
+
+  <div class="container1">
+    <a href="https://soccer-social-network.netlify.app" target="_blank" rel="noopener noreferrer">
+      <img class="clickable-image" src="sports social.JPG" alt="Soccer Social Network">
+    </a>
+    <a href="https://astounding-duckanoo-6bf7b1.netlify.app" target="_blank" rel="noopener noreferrer">
+      <img class="clickable-image" src="password generator.JPG" alt="Astounding Duckanoo">
+    </a>
+  </div>
+</body>
+</html>
+
+
